@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-ink-950: #0e0c14;
+  --color-ink-900: #17141f;
+  --color-ink-800: #221e2d;
+  --color-ink-700: #322c3d;
+  --color-ink-600: #4a4358;
+  --color-ink-500: #6b6379;
+  --color-ink-400: #948c9f;
+  --color-ink-300: #bdb6c6;
+  --color-ink-200: #ddd8e5;
+  --color-ink-100: #f0eef5;
+  --color-ink-50: #f9f8fb;
+
+  --color-plum-600: #6d4dd6;
+  --color-plum-500: #8563e8;
+  --color-plum-400: #a58af0;
+  --color-plum-300: #c8b8f7;
+  --color-plum-100: #efe9fc;
+
+  --color-sun-500: #e8a23a;
+  --color-leaf-500: #4fa876;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--color-ink-950);
+  color: var(--color-ink-100);
+}
+
+/* TipTap editor content styling */
+.ProseMirror {
+  outline: none;
+  min-height: 260px;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--color-ink-400);
+  pointer-events: none;
+  height: 0;
+}
+.ProseMirror h1 { font-size: 1.6em; font-weight: 600; margin: 0.6em 0 0.3em; }
+.ProseMirror h2 { font-size: 1.3em; font-weight: 600; margin: 0.6em 0 0.3em; }
+.ProseMirror ul, .ProseMirror ol { padding-left: 1.4em; }
+.ProseMirror blockquote { border-left: 3px solid var(--color-plum-300); padding-left: 0.8em; color: var(--color-ink-500); }
+.ProseMirror pre { background: var(--color-ink-100); padding: 0.8em; border-radius: 0.5em; overflow-x: auto; }
+.dark .ProseMirror pre { background: var(--color-ink-800); }
+.ProseMirror hr { border: none; border-top: 1px solid var(--color-ink-200); margin: 1.5em 0; }
