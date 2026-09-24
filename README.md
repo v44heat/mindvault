@@ -387,9 +387,6 @@ Following the phased plan from the original spec — Phases 1 through 5 are done
 - **Phase 4 (done):** embeddings + semantic search, related memories, "On This Day"
 - **Phase 5 (done):** goals with milestones, habits with streaks, Recharts analytics dashboard
 
-Phases 6 and 7 (voice/media, and production hardening) were deliberately left out of this
-build rather than scaffolded — see below for why and what they'd involve.
-
 ## Future considerations
 
 These were part of the original spec but are out of scope for this build. Each is written
